@@ -1,4 +1,5 @@
-﻿using NGCOREAPP.Tools;
+﻿using NGCOREAPP.Models.List;
+using NGCOREAPP.Tools;
 
 namespace NGCOREAPP.Operation
 {
@@ -9,10 +10,14 @@ namespace NGCOREAPP.Operation
             string url = "";
 
             Random random = new Random();
-
-            url += random.LowerCase()+ random.UpperCase() + random.Next(999)+ random.Next(999) + random.LowerCase() + random.UpperCase();
-
+            Repeat:
+            url += random.LowerCase()+ random.UpperCase() + random.Next(999) + random.LowerCase() + random.UpperCase();
+            if (Links.LinkList.Any(x => x.ShortUrl == url))
+            {
+                goto Repeat;
+            }
             return url;
+
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NGCOREAPP.Models;
+using NGCOREAPP.Models.List;
 using NGCOREAPP.Operation;
 using System.Diagnostics;
 
@@ -18,7 +19,7 @@ namespace NGCOREAPP.Controllers
         {
             GenerateLink generate = new GenerateLink();
             _link.ShortUrl = generate.Generate();
-
+            Links.LinkList.Add(_link);
             return _link.ShortUrl;
 
         }
