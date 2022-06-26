@@ -3,11 +3,12 @@
     public class Link
     {
         private string _longurl="";
+        
         public string LongUrl
         {
             get
             {
-                return "http://"+_longurl;
+                return "http://" + _longurl;
             }
             set
             {
