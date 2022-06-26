@@ -28,12 +28,14 @@
                 <tr>
                     <th>Uzun Link</th>
                     <th>Kısa Link</th>
+                    <th>Tıklama Sayısı</th>
                 </tr>
             </thead>
             <tbody >
                 <tr ng-repeat="Link in LinkList">
                     <td>{{Link.longUrl}}</td>
-                    <td>{{Link.shortUrl}}</td>
+                    <td>https://localhost:7177/D/I?I={{Link.shortUrl}}</td>
+                    <td>{{Link.clickCount}}</td>
                 </tr>
             </tbody>
         </table>
