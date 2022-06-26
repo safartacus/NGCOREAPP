@@ -23,6 +23,11 @@ namespace NGCOREAPP.Controllers
             return _link.ShortUrl;
 
         }
+        [HttpPost]
+        public List<Link> GetLinkList()
+        {
+            return Links.LinkList;
+        }
 
 
     }

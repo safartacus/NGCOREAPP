@@ -8,7 +8,6 @@ namespace NGCOREAPP.Operation
         public string Generate()
         {
             string url = "";
-
             Random random = new Random();
             Repeat:
             url += random.LowerCase()+ random.UpperCase() + random.Next(999) + random.LowerCase() + random.UpperCase();
