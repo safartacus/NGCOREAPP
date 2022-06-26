@@ -29,7 +29,7 @@ app.controller("Home", function ($scope, $http) {
         $scope.PreCopy = function (shortCode) {
             Copy(shortCode);
 
-            $("msg").removeClass("d-none");
+            $("#msg").removeClass("d-none");
             $scope.Copied = $("#kopyala" + shortCode).html();
 
             setTimeout(function () {
@@ -41,14 +41,14 @@ app.controller("Home", function ($scope, $http) {
         }
     }
 });
-        function Copy(shortCode) {
-            var r = document.createRange();
-            var element = document.getElementById("kopyala" + shortCode);
-            r.selectNode(element);
-            window.getSelection().removeAllRanges();
-            window.getSelection().addRange(r);
-            document.execCommand("copy");
-            window.getSelection().removeAllRanges();
-        }
+function Copy(shortCode) {
+    var r = document.createRange();
+    var element = document.getElementById("kopyala" + shortCode);
+    r.selectNode(element);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(r);
+    document.execCommand("copy");
+    window.getSelection().removeAllRanges();
+}
 
-   
+
