@@ -10,7 +10,7 @@ namespace NGCOREAPP.Operation
 
             Random random = new Random();
 
-            url += random.LowerCase()+ random.UpperCase() + random.Next(999)+ random.LowerCase() + random.UpperCase();
+            url += random.LowerCase()+ random.UpperCase() + random.Next(999)+ random.Next(999) + random.LowerCase() + random.UpperCase();
 
             return url;
         }
